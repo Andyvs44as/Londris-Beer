@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Londris Beer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Londris Beer</h1>
+    <nav>
+      <ul>
+        <li><a href="#bebidas">Bebidas</a></li>
+        <li><a href="#combos">Combos de Wisk</a></li>
+        <li><a href="#chips">Chips</a></li>
+        <li><a href="#pod">Pod</a></li>
+        <li><a href="#essencias">Essências</a></li>
+        <li><a href="#kit">Kit de Essência</a></li>
+        <li><a href="#doces">Doces</a></li>
+        <li><a href="#cigarros">Cigarros</a></li>
+        <li><a href="#pecas">Peças de Narguilé</a></li>
+        <li><a href="#mercado">Mercado</a></li>
+        <li><a href="#carrinho">Carrinho 🛒</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bebidas -->
+    <section id="bebidas" class="categoria">
+      <h2>Bebidas</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Cerveja Skol</p>
+          <p>R$ 6,00</p>
+          <button onclick="adicionarCarrinho('Cerveja Skol',6)">Adicionar</button>
+        </div>
+        <div class="produto">
+          <p>Refrigerante Coca-Cola</p>
+          <p>R$ 5,00</p>
+          <button onclick="adicionarCarrinho('Coca-Cola',5)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Combos -->
+    <section id="combos" class="categoria">
+      <h2>Combos de Wisk</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Combo Whisky Jack Daniel's + Copo</p>
+          <p>R$ 120,00</p>
+          <button onclick="adicionarCarrinho('Combo Whisky Jack Daniel\'s + Copo',120)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chips -->
+    <section id="chips" class="categoria">
+      <h2>Chips</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Batata Chips</p>
+          <p>R$ 8,00</p>
+          <button onclick="adicionarCarrinho('Batata Chips',8)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pod -->
+    <section id="pod" class="categoria">
+      <h2>Pod</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Pod Juul</p>
+          <p>R$ 35,00</p>
+          <button onclick="adicionarCarrinho('Pod Juul',35)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essências -->
+    <section id="essencias" class="categoria">
+      <h2>Essências</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Essência Maçã</p>
+          <p>R$ 20,00</p>
+          <button onclick="adicionarCarrinho('Essência Maçã',20)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kit de Essência -->
+    <section id="kit" class="categoria">
+      <h2>Kit de Essência</h2>
+      <div class="marcas">
+        <button onclick="mostrarSabores('ZOMO')">ZOMO</button>
+        <button onclick="mostrarSabores('ZIGGY')">ZIGGY</button>
+        <button onclick="mostrarSabores('NAY')">NAY</button>
+        <button onclick="mostrarSabores('SENSE')">SENSE</button>
+        <button onclick="mostrarSabores('IGNITE')">IGNITE</button>
+        <button onclick="mostrarSabores('ADALYA')">ADALYA</button>
+        <button onclick="mostrarSabores('MAGIC')">MAGIC</button>
+        <button onclick="mostrarSabores('ONIX')">ONIX</button>
+        <button onclick="mostrarSabores('SMYRNA')">SMYRNA</button>
+      </div>
+      <div id="saboresKit" class="produtos"></div>
+    </section>
+
+    <!-- Doces -->
+    <section id="doces" class="categoria">
+      <h2>Doces</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Chocolate KitKat</p>
+          <p>R$ 4,00</p>
+          <button onclick="adicionarCarrinho('Chocolate KitKat',4)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cigarros -->
+    <section id="cigarros" class="categoria">
+      <h2>Cigarros</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Cigarro Marlboro</p>
+          <p>R$ 10,00</p>
+          <button onclick="adicionarCarrinho('Cigarro Marlboro',10)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peças de Narguilé -->
+    <section id="pecas" class="categoria">
+      <h2>Peças de Narguilé</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Vaso de Narguilé</p>
+          <p>R$ 50,00</p>
+          <button onclick="adicionarCarrinho('Vaso de Narguilé',50)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mercado -->
+    <section id="mercado" class="categoria">
+      <h2>Mercado</h2>
+      <div class="produtos">
+        <div class="produto">
+          <p>Arroz 5kg</p>
+          <p>R$ 25,00</p>
+          <button onclick="adicionarCarrinho('Arroz 5kg',25)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrinho -->
+    <section id="carrinho" class="categoria">
+      <h2>Carrinho 🛒</h2>
+      <ul id="itensCarrinho"></ul>
+      <p>Total: R$ <span id="total">0</span></p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <!-- Login -->
+    <section id="login" class="categoria">
+      <h2>Login</h2>
+      <input type="text" id="usuario" placeholder="Usuário">
+      <input type="password" id="senha" placeholder="Senha">
+      <button onclick="fazerLogin()">Entrar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Suporte em caso de erro: <a href="https://wa.me/5543988142146" target="_blank">(43) 98814-2146</a></p>
+    <p>&copy; Londris Beer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
